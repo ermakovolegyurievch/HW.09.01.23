@@ -42,10 +42,10 @@ public class Main {
     public static void task3() {
         System.out.println("Задача 3");
         int nation = 12_000_000;
-        int increase = (nation / 1000) * 17;
-        int decrease = (nation / 1000) * 8;
-        int sub = increase - decrease;
         for (int i = 1; i <= 10; i++) {
+            int increase = (nation / 1000) * 17;
+            int decrease = (nation / 1000) * 8;
+            int sub = increase - decrease;
             nation += sub;
             System.out.println("Год " + i + ", численность населения составляет " + nation);
         }
@@ -74,9 +74,10 @@ public class Main {
     public static void task6() {
         System.out.println("Задача 6");
         double rsl = 15000;
-        for (int i = 1; rsl <= 12_000_000; i++) {
+        int time = 12 * 9;
+        for (int i = 1; i < time; i++) {
             rsl += (rsl / 100 * 7);
-            if (i % 6 == 0 && i <= (12 * 9)) {
+            if (i % 6 == 0) {
                 System.out.println(i + " месяц " + rsl + " сумма накопления.");
             }
         }
